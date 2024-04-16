@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SerieDos{
+  public static void main(String args[]){
+    Scanner teclado= new Scanner(System.in);   
+    int serie=0, i=0, elementos=0;
+
+    System.out.print("Digite el numero de elementos de la serie: ");
+    elementos= teclado.nextInt();
+
+    while(i<elementos){
+      serie=serie+2; 
+      i++;
+      if(i==elementos){
+      System.out.print(serie-1 + ". ");
+      }
+      else{
+      System.out.print(serie-1 + ", ");  
+      }
+        
+    }   
+ }
+}

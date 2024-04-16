@@ -1,0 +1,28 @@
+//Interfaz gráfica (Swing-JButton)
+
+import javax.swing.*;  //Importar componentes de la libreria Swing.
+import java.awt.event.*;//Importa funcionalidades o eventos que controlaran los componentes.
+
+public class Formulario extends JFrame implements ActionListener{
+  
+  JButton boton1;
+  public Formulario(){
+   setLayout(null);
+   boton1= new JButton("Cerrar");
+   boton1.setBounds(50,150,100,30);
+   add(boton1);
+   boton1.addActionListener(this);
+  }
+  public void actionPerformed(ActionEvent e){//e es el espacio en memoriaen el que se guardara el evento
+   if(e.getSource()==boton1){ //metodo getsource
+     System.exit(0);
+   }
+  }
+  public static void main(String args[]){
+  Formulario formulario1 = new Formulario();
+  formulario1.setBounds(0,0,200,200);
+  formulario1.setVisible(true);
+  formulario1.setResizable(false);
+  formulario1.setLocationRelativeTo(null);
+  }
+}

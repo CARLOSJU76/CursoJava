@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Menu{
+  public static void main(String args[]){
+    double num_uno=5, num_dos=3, resultado=0;
+    int opcion=3 ;
+    
+    Scanner in= new Scanner(System.in);
+
+   System.out.println("Digite el primer numero:");
+   num_uno=in.nextInt();
+
+   System.out.println("Digite el segundo numero: ");
+   num_dos=in.nextInt();
+
+    System.out.println("Elije una de las siguientes opciones: " + "\n" +
+    "1.- Si deseas sumar los dos numeros."+"\n"+
+    "2.- Si deseas restar los numeros."+"\n"+
+    "3.- Si deseas multiplicar los numeros."+"\n"+
+    "4.- Si deseas  realizar una división. ");    
+   opcion= in.nextInt();
+
+
+    switch(opcion){
+     case 1: resultado= num_uno+num_dos;
+	System.out.println("El resultado de la suma es" + resultado + " .");break;
+     case 2: resultado= num_uno-num_dos;
+	System.out.println("El resultado de la resta es: "+ resultado + " .");break;
+     case 3: resultado= num_uno*num_dos;
+	System.out.println("El resultado de la multiplicacion es: "+ resultado + " .");break;
+     case 4: resultado= num_uno/num_dos;
+	System.out.println("El resultado de la división es: " + resultado + " .");break;
+     default: System.out.println("Error, la opcion elegida no está disponible. ");break;
+    }
+
+  }
+
+
+
+}

@@ -1,0 +1,51 @@
+//JAVA39.Boton para aceptar terminos.
+
+import javax.swing.*;
+import javax.swing.event.*;//eventos de checkbox-->ChangeListener
+import java.awt.event.*;//eventos de botones-->ActionListener
+
+public class Carlosju extends JFrame implements ActionListener,ChangeListener{
+  private JLabel etiqueta1;
+  private JCheckBox caja1;
+  private JButton boton1;
+
+  public Carlosju(){
+    setLayout(null);
+    etiqueta1= new JLabel("Aceptar términos y condiciones");
+    etiqueta1.setBounds(10,10,400,30);
+    add(etiqueta1);
+
+    caja1= new JCheckBox("Acepto");
+    caja1.setBounds(10,50,100,30);
+    caja1.addChangeListener(this);
+    add(caja1);
+
+    boton1= new JButton("Continuar");
+    boton1.setBounds(10,100,100,30);
+    add(boton1);
+    boton1.addActionListener(this);
+    boton1.setEnabled(false);
+    
+ }
+ public void stateChanged(ChangeEvent box){
+  if(caja1.isSelected()==true){
+    boton1.setEnabled(true);
+  }else{
+    boton1.setEnabled(false);
+  }
+ }
+ public void actionPerformed(ActionEvent btn){
+   if(btn.getSource()==boton1){
+     System.exit(0);
+   }
+ }  
+ public static void main(String args[]) {
+   Carlosju formulario1= new Carlosju();
+   formulario1.setBounds(0,0,350,200);
+   formulario1.setVisible(true);
+   formulario1.setResizable(false);
+   formulario1.setLocationRelativeTo(null);
+ }
+}
+
+

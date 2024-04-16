@@ -1,0 +1,18 @@
+//Interfaces graficas(swing-JFrame)
+
+import javax.swing.*;//importando la libreria swing.
+
+public class Formulario extends JFrame{  //Heredando de la clase JFrame
+
+ public Formulario(){
+  setLayout(null);
+  
+ }
+ public static void main(String args[]){
+   Formulario formulario1= new Formulario();
+   formulario1.setBounds(0, 0, 400, 550);
+   formulario1.setVisible(true);
+   formulario1.setLocationRelativeTo(null); //Coloca la interfaz al centro de la pantall
+   formulario1.setResizable(false);
+ }
+}

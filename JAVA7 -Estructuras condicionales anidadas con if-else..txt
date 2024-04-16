@@ -1,0 +1,21 @@
+public class MenuUno{
+  public static void main(String args[]){
+    int menu= 4; double numUno=6, numDos=9, resultado=0;
+    if (menu==1){
+      resultado=numUno+numDos;
+      System.out.println("El resultado de la suma es: " + resultado);
+   } else if(menu==2){
+       resultado=numUno-numDos;
+       System.out.println("El resultado de la resta es: " + resultado);
+   } else if(menu==3){
+       resultado=numUno*numDos;
+       System.out.println("El resultado de la multiplicación es: " + resultado);
+   } else if(menu==4){
+       resultado=numUno/numDos;
+       System.out.println("El resultado de la división es: " + resultado);
+   } else{
+       System.out.println("La opción no está disponible, intenta de nuevo");
+   }
+ }
+
+}

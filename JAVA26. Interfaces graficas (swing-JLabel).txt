@@ -1,0 +1,28 @@
+import javax.swing.*;
+
+public class Formulario extends JFrame{
+
+ private JLabel etiqueta1;
+ private JLabel etiqueta2;
+
+ public Formulario(){
+  setLayout(null);          //Indica el empleo de objetos por coordenaddas.
+  etiqueta1 = new JLabel("Interfaz gráfica.");
+  etiqueta1.setBounds(10,100,100,30);
+  add(etiqueta1);   //método add Indica que todo lo anterior debe ser mostrado en la interfaz fráfica  
+ 
+  etiqueta2= new JLabel("versión 1.0");
+  etiqueta2.setBounds(10,20,300,30);
+  add(etiqueta2);
+ }
+
+  public static void main(String args[]){
+  Formulario formulario1 = new Formulario();
+  formulario1.setBounds(0,0,300,200);
+  formulario1.setResizable(false);
+  formulario1.setVisible(true);
+  formulario1.setLocationRelativeTo(null);
+  }
+
+
+}

@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class SerieTres{
+   public static void main(String args[]){
+     Scanner teclado= new Scanner(System.in);
+     int i=1, j=1, k=99, elementos=0;
+
+     System.out.print("Digite el numero de elementos de la serie: ");
+     elementos= teclado.nextInt();
+
+     do{
+       if(i%2!=0){
+        if(i==elementos){
+        System.out.print(j+ ". "); 
+        }
+        else{
+        System.out.print(j+ ", ");
+        j++;
+        }
+        
+       }
+	else if(i%2==0){
+     
+        if(i==elementos){
+         System.out.print(k + ". ");
+        }
+         else{
+         System.out.print(k+ ", ");
+	k=k-1;
+        }
+        
+       }
+     i++;
+  }while(i<=elementos);
+
+ }
+
+
+}

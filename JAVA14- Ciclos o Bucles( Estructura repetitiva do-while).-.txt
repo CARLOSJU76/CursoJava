@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class DoWhile{
+  public static void main(String args[]){
+   Scanner teclado= new Scanner(System.in);
+  int numero=0, razon=0; 
+
+   System.out.print("Introduzca el numero inicial de la serie descendente: ");
+   numero= teclado.nextInt();
+   System.out.print("Introduzca la razon de descenso de la serie:");
+   razon= teclado.nextInt();
+
+   do{
+      
+     if(numero<razon && numero>=0){
+     System.out.print(numero + ". ");
+      }
+     else{
+     System.out.print(numero + ", ");
+      }
+      numero=numero-razon;
+   }while(numero>=0);
+   
+
+   }
+
+
+
+}

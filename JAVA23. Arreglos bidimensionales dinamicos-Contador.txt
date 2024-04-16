@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class MatrizCon{
+ public static void main(String args[]){
+
+ Scanner teclado= new Scanner(System.in);
+ int nFil=0 , nCol=0, contador=1;
+
+
+ System.out.println("Digite el numero de filas: ");
+ nFil= teclado.nextInt();
+ System.out.println("Digite el numero de columnas: ");
+ nCol= teclado.nextInt();
+
+
+ int numeros[][] = new int[nFil][nCol];
+
+ for(int i=0; i<nFil; i++){
+  for(int j=0; j<nCol; j++){
+   numeros[i][j]= contador;
+   System.out.print("["+ numeros[i][j]+ "]");
+   contador++;   
+  }
+  System.out.println("");
+ }
+ 
+}
+
+}

@@ -1,0 +1,38 @@
+//JAVA 34.JComboBox
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Carlosju extends JFrame implements ItemListener{
+  private JComboBox combo1;
+
+  public Carlosju(){
+    setLayout(null);
+    combo1= new JComboBox();
+    combo1.setBounds(10,10,80,20);
+    add(combo1);
+
+    combo1.addItem("Amarillo");  //Agregar opcion de texto.
+    combo1.addItem("Azul");
+    combo1.addItem("Rojo");
+    combo1.addItem("verde");
+    combo1.addItem("Negro");
+
+    combo1.addItemListener(this); //Indica que va a tener un evento
+  }
+
+  public void itemStateChanged(ItemEvent opt){  //constructor del evento
+    if(opt.getSource() == combo1){
+      String opcion= combo1.getSelectedItem().toString();
+      setTitle(opcion);
+    }
+  }
+  public static void main(String args[]){
+    Carlosju formulario1= new Carlosju();
+    formulario1.setBounds(0,0,250,150);
+    formulario1.setVisible(true);
+    formulario1.setResizable(false);
+    formulario1.setLocationRelativeTo(null);
+}
+ 
+}

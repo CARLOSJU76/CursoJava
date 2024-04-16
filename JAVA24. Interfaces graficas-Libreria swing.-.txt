@@ -1,0 +1,26 @@
+//Crear interfaces graficas con la libreria swing.
+
+import javax.swing.*;                  		//importando libreria swing "*"-> todos los elementos.
+import java.util.Scanner;
+
+
+ //JFrame permite crear interfaces gráficas.
+
+public class Formulario extends JFrame{
+  private JLabel etiqueta1;
+
+  public Formulario(){              //Constructor de etiqueta
+  setLayout(null);
+  etiqueta1 = new JLabel("La Geekipedia de Carlos");
+  etiqueta1.setBounds(10,20,200,300);		//(coordx, coordy, ancho, alto);
+  add(etiqueta1);
+  }
+
+   public static void main (String args[]){
+    Formulario formulario1= new Formulario();
+    formulario1.setBounds(0,0,400,400);
+    formulario1.setVisible(true);
+    formulario1.setLocationRelativeTo(null);
+
+   }
+}  	

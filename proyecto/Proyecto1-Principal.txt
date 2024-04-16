@@ -1,0 +1,45 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Principal extends JFrame implements ActionListener{
+  
+  private JMenuBar barra;
+  private JMenu menuOpciones, menuCalcular,menuAcercaDe, menuColorFondo;
+  private JLabel labelLogo, labelBielvenido, labelTitle, labelNombre, labelAPaterno,labelAMaterno;
+                 labelDerpartamento,labelAntiguedad,labelResultado,labelFooter;
+  private JTextField campoNombreT,campoAPaternoT,campoAMaternoT;
+  private JComboBox comboDepartamento, comboAntiguedad;
+  private JScrollPane scrollpane1;
+  private JTextArea textarea1;
+
+  public Principal(){
+    setLayout(null);
+    setTitle("Pantalla principal");
+    getContentPane().setBackground(new Color(255,0,0));
+    setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
+   
+    barra = new JMenuBar();
+    barra.setBackground(new Color(255,0,0));
+    setMenuBar(barra);
+   
+    menuOpciones = JMenu("Opcionesd");
+    menuOpciones.setBackground(255,0,0);
+    menuOpciones.setFont(new Font("Andale Mono", 1, 14));
+    menuOpciones.setForeground(new Color(255,255,255));
+    barra.add(menuOpciones); 
+    
+    menuCalcular =new JMenu("Calcular");
+    menuCalcular.setBackground(new Color(255,0,0));
+    menuCalcular.setFont(new Font("Andale Mono",1,14));
+    menuCalcular.setForeground(new Color(255,255,255));
+    barra.add(menuCalcular);
+ 
+    menuAcercaDe = new JMenu("Acerca de");
+    menuAcercaDe.setBackground(new Color(255,0,0));
+    menuAcercaDe.serFont(new Font("Andale Mono", 1, 14));
+    menuAcercaDe.setForeground(new Color(255,255,255));
+    barra.add(menuAcercaDe);
+    
+  }
+}

@@ -1,0 +1,52 @@
+//Interfaces graficas (Swing - JTextField)
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Formulario extends JFrame implements ActionListener{
+private JTextField texto1;
+private JButton boton1,  botonC;
+private JLabel etiqueta1;
+
+
+ public Formulario(){
+ setLayout(null);
+ 
+ texto1= new JTextField();
+ texto1.setBounds(120,17,150,20);
+ add(texto1);
+
+ etiqueta1= new JLabel("Usuario: ");
+ etiqueta1.setBounds(10,10,100,30);
+ add(etiqueta1);
+
+ boton1= new JButton("Aceptar");
+ boton1.setBounds(10,40,100,30);
+ add(boton1);
+ boton1.addActionListener(this);
+
+ botonC= new JButton("Cerrar");
+ botonC.setBounds(150,40,100,30);
+ add(botonC);
+ botonC.addActionListener(this);
+
+
+ }
+ public void actionPerformed(ActionEvent e){
+  if(e.getSource()==boton1){
+  String letrero= texto1.getText();// obtener de la linea de texto los datos para guardarlos en la variable letrero.
+  setTitle(letrero);
+  }
+  if(e.getSource()==botonC){
+  System.exit(0);
+  }
+ }
+ public static void main(String args[]){
+  Formulario formulario1 = new Formulario();
+  formulario1.setBounds(0,0,300,150);
+  formulario1.setVisible(true);
+  formulario1.setResizable(false);
+  formulario1.setLocationRelativeTo(null);
+ }
+
+}

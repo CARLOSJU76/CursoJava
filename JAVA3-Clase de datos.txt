@@ -1,0 +1,23 @@
+
+Tipos de datos JAVA
+
+Primitivos 
+	Enteros
+		byte(-128 hasta 127)
+		short(-32,768 hasta 32,767)
+		int(-2,147,483,648 hasta 2,147,483,647 )
+		long(muy grande)
+	Decimales
+		float
+		double
+	Otros 
+		char(un solo caracter)
+		bolead(true|false)
+Tipos Objeto
+	String(cadenas de texto)
+		Ejemplo
+			"Hola mundo"
+
+		
+
+		

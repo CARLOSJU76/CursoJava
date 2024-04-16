@@ -1,0 +1,7 @@
+public class Operadores{
+ public static void main(String args[]){
+   int num_uno=4; int num_dos=4; int resultado=0;
+   resultado=numero_uno + numero_dos/2;
+   System.out.println("El resultado de la operación es:" + resultado);
+ }
+}

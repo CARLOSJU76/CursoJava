@@ -1,0 +1,63 @@
+//JAVA38.JCheckBox
+
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class Carlosju extends JFrame implements ChangeListener{
+  private JCheckBox caja1, caja2, caja3, caja4;
+  private JButton boton1;
+  
+  public Carlosju(){
+    setLayout(null);
+
+    caja1 = new JCheckBox("inglés");
+    caja1.setBounds(10,10,150,30);
+    caja1.addChangeListener(this);
+    add(caja1);
+
+    caja2 = new JCheckBox("francés");
+    caja2.setBounds(10,50,150,30);
+    caja2.addChangeListener(this);
+    add(caja2);
+ 
+    caja3 = new JCheckBox("alemán");
+    caja3.setBounds(10,90,150,30);
+    caja3.addChangeListener(this);
+    add(caja3);
+
+    caja4 = new JCheckBox("Cerrar");
+    caja4.setBounds(200, 50, 150, 30);
+    caja4.addChangeListener(this);
+    add(caja4);
+ 
+    
+  }
+
+  public void stateChanged(ChangeEvent btn){
+    String seleccion = "";
+    if(caja1.isSelected()==true){
+      seleccion= seleccion + "inglés-";
+    }
+    if(caja2.isSelected()==true){
+      seleccion= seleccion + "francés-";
+
+    }
+    if(caja3.isSelected()==true){
+      seleccion= seleccion + "alemán-";
+    }
+	setTitle(seleccion);
+    if(caja4.isSelected()==true){
+      System.exit(0);
+    }
+  }
+  
+  public static void main(String args[]){
+    Carlosju formulario1 = new Carlosju();
+    formulario1.setBounds(0,0,350,200);
+    formulario1.setVisible(true);
+    formulario1.setResizable(false);
+    formulario1.setLocationRelativeTo(null);
+  }
+}
+
+

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SerieUno{
+  public static void main(String args[]){
+
+   int serie;
+
+   Scanner teclado= new Scanner(System.in);
+
+   System.out.print("Digite el numero de elmentos de la serie: ");
+   serie=teclado.nextInt();   
+
+
+   for(int i=1; i<(serie+1); i++){
+    if(i==serie){
+    System.out.print(i + ".");
+    }
+    else{
+    System.out.print(i + ", ");
+    }   
+  }
+ }
+}

@@ -1,0 +1,55 @@
+//Pasar texti de un JTextFiedl a un JTextArea
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Formulario extends JFrame implements ActionListener{
+ private JTextField texto;
+ private JTextArea hoja;
+ private JScrollPane corredera;
+ private JButton boton1, botonC;
+ String leyenda= "";
+
+ public Formulario(){
+ setLayout(null);
+ texto= new JTextField();
+ texto.setBounds(10,10,200,30);
+ add(texto);
+
+ boton1 = new JButton("Agregar");
+ boton1.setBounds(250,10,100,30);
+ add(boton1);
+ boton1.addActionListener(this);
+
+ botonC = new JButton("Cerrar");
+ botonC.setBounds(400,10,100,30);
+ add(botonC);
+ botonC.addActionListener(this);
+
+ hoja= new JTextArea();
+ corredera= new JScrollPane(hoja);
+ corredera.setBounds(10,50,400,300);
+ add(corredera);
+ }
+ public void actionPerformed(ActionEvent e){
+  if(e.getSource()==boton1){
+  leyenda += texto.getText()+ "\n";
+  hoja.setText(leyenda);
+  texto.setText("");
+  }
+  if(e.getSource()==botonC){
+  System.exit(0);
+  }
+ }
+
+ public static void main(String args[]){
+  Formulario formulario1 = new Formulario();
+  formulario1.setBounds(0,0,540,400);
+  formulario1.setVisible(true);
+  formulario1.setResizable(false);
+  formulario1.setLocationRelativeTo(null);
+ 
+ }
+
+ 
+}

@@ -1,0 +1,81 @@
+//JAVA 36. JMenuBar-JMenu-JMenuItem
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Carlosju extends JFrame implements ActionListener{
+  private JMenuBar menubar;
+  private JMenu menu1;
+  private JMenuItem menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7;
+
+  public Carlosju(){
+
+    setLayout(null);
+    menubar = new JMenuBar();
+    setJMenuBar(menubar);
+    
+    menu1 = new JMenu("Opciones");
+    menubar.add(menu1);
+    
+    menuItem1 = new JMenuItem("Rojo");
+    menuItem1.addActionListener(this);
+    menu1.add(menuItem1);
+
+    menuItem2 = new JMenuItem("Verde");
+    menuItem2.addActionListener(this);
+    menu1.add(menuItem2);
+
+    menuItem3 = new JMenuItem("Azul");
+    menuItem3.addActionListener(this);
+    menu1.add(menuItem3);
+
+    menuItem4 = new JMenuItem("Morado");
+    menuItem4.addActionListener(this);
+    menu1.add(menuItem4);
+
+    menuItem5 = new JMenuItem("Naranja");
+    menuItem5.addActionListener(this);
+    menu1.add(menuItem5);
+
+    menuItem6 = new JMenuItem("Aguamarina");
+    menuItem6.addActionListener(this);
+    menu1.add(menuItem6);
+
+    menuItem7 = new JMenuItem("Rosado");
+    menuItem7.addActionListener(this);
+    menu1.add(menuItem7);
+        
+  }
+  public void actionPerformed(ActionEvent btn){
+    Container fondo = this.getContentPane(); // Container (elemento de libreria awt)Crea contenedor
+    if(btn.getSource() == menuItem1){        //getContentPane()-->método para adaptar las caracteristicas de la interfaz al contenedor.
+      fondo.setBackground(new Color(255,0,0));
+    }
+    if(btn.getSource() == menuItem2){
+      fondo.setBackground(new Color(0,255,0));
+    }
+    if(btn.getSource() == menuItem3){
+      fondo.setBackground(new Color(0,0,255));
+    }	
+    if(btn.getSource() == menuItem4){
+      fondo.setBackground(new Color(128,0,255));
+    }
+    if(btn.getSource() == menuItem5){
+      fondo.setBackground(new Color(255,128,0));
+    }	
+    if(btn.getSource() == menuItem6){
+      fondo.setBackground(new Color(0,255,255));
+    }	
+    if(btn.getSource() == menuItem7){
+      fondo.setBackground(new Color(255,192,203));
+    }				
+  } 
+  public static void main(String args[]){
+    Carlosju formulario1 = new Carlosju();
+    formulario1.setBounds(0,0,400,300);
+    formulario1.setVisible(true);
+    formulario1.setResizable(false);
+    formulario1.setLocationRelativeTo(null);
+  }
+}
